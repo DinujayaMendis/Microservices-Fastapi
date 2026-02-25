@@ -22,6 +22,19 @@ This repository contains a fully functional Microservices Architecture implement
 * [cite_start]Pydantic (For robust data validation) [cite: 15]
 * PyJWT (For securing the gateway)
 
+  
+# Terminal 1: Start Student Service
+cd student-service
+uvicorn main:app --reload --port 8001
+
+# Terminal 2: Start Course Service
+cd course-service
+uvicorn main:app --reload --port 8002
+
+# Terminal 3: Start API Gateway
+cd gateway
+uvicorn main:app --reload --port 8000
+
 ## 📁 Project Structure
 
 ```text
@@ -40,3 +53,5 @@ microservices-fastapi/
 │   └── main.py              # Course endpoints and mock data
 │
 └── requirements.txt         # Project dependencies
+
+
